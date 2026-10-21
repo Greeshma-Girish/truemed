@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrueMed — AI Medicine Identification & Drug Information Guide</title>
+  <meta name="description"
+    content="AI-powered medical platform for pill identification, drug monograph exploration, and digital prescription OCR analysis." />
+
+  <!-- Anti-flash inline theme loader -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('truemed_theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = saved === 'dark' || (!saved && prefersDark);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body
+  class="bg-[#F7F9F7] text-[#202B29] dark:bg-[#111B1A] dark:text-[#EDF5F3] font-sans antialiased min-h-screen transition-colors duration-150">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
